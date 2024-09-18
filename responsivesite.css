@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* isse vertically centre mein ho jayega child saare */
+    justify-content: space-between;
+    padding: 0 4vw;
+    border-bottom: 2px solid #dadada;
+}
+
+.nav-part2 {
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    /* justify-content: space-between; this property will not work because width humne di hi  nahi ha to space ha hi nahi  */
+    column-gap: 4vw;
+
+}
+
+.nav h2 {
+    font-size: 2.3vw;
+    font-weight: bolder;
+}
+
+
+.nav-part2 h4 {
+    font-size: 1.3vw;
+
+}
+
+
+.nav-part2 i {
+    font-size: 1.2vw;
+    font-weight: 800;
+    display: none;
+}
+
+.nav-part2 button {
+    font-size: 1vw;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 1vw 1.2vw;
+    background-color: rgb(196, 69, 6);
+    color: #fff;
+
+
+
+}
+
+.maincontent {
+    width: 100%;
+    /* height: 100%; this giving simple 100% will covered the total 100% so it is exact cover that space so scroll-bar occurs  */
+    height: calc(100% - 100px);
+    /* this calc function work like first ki yeh space ko overflow nhi hone dega xor y-axis mein or total 100% mein 100px nikal ke height dedega (means % mein se px value ko nikal lega )*/
+    /* background-color: burlywood; */
+    display: flex;
+
+}
+
+.maincontent .left {
+    height: 100%;
+    width: 55%;
+    /* background-color: rgb(255, 166, 1); */
+    position: relative;
+    padding: 5vw 4vw;
+    /*left right ki padding mein same dunga nav ki kyoki item ka content ek hi line mein dikhega*/
+}
+
+.maincontent .left h1 {
+    font-size: 4.2vw;
+    line-height: 4.4vw;
+
+}
+
+.left h1 span {
+    color: rgb(170, 58, 3);
+}
+
+.left p {
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 1.2vw;
+    color: #433e3e;
+    margin: 2vw 0 4vw 0;
+    width: 80%;
+}
+
+.left button {
+    font-size: 1vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 1vw 2vw;
+    background-color: rgb(196, 69, 6);
+    color: #fff;
+}
+
+
+.maincontent .right {
+    height: 100%;
+    width: 45%;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+.maincontent .right img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+@media (max-width:600px) {
+    .nav {
+        background-color: rgb(196, 69, 6);
+        
+        color: #fff;
+        padding: 0 5vw;
+        height: 60px;
+    }
+
+    .nav h2 {
+        font-size: 5vw;
+    }
+
+    .nav h4,
+     .nav button {
+        display: none;
+        /* font-size: 6vw; */
+    }
+
+    .nav i {
+        display: block;
+        font-size: 6vw;
+    }
+   
+    
+    .maincontent {
+
+        height: calc(100% -60px);
+        flex-direction: column;
+
+    }
+
+
+     .maincontent .left {
+        width: 100%;
+        height: 59%;
+        background-color: rgb(236, 201, 136);
+        padding: 4vw 12vw;
+        overflow: scroll;
+    }
+
+    .maincontent .left::-webkit-scrollbar{
+    display: none;
+    }
+   .maincontent .right {
+        width: 100%;
+        height: 55%;
+        /* background-color: blue; */
+    }
+
+
+     .maicontent .left h1{
+   font-size: 14vw;
+   line-height: 20vw;
+    }
+
+    .maincontent .left p{
+        font-size: 5vw;
+    }
+    .nav-part2 button{
+        font-size: 3vw;
+        padding: 4vw 4vw;
+    }
+}
